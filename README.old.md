@@ -1,1 +1,0 @@
-# manishpatel-portfolio-website
