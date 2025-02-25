@@ -22,122 +22,105 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-            <div className="max-w-3xl mx-auto px-5 mt-28">
-      <div className="flex flex-col justify-center">
-        <div className="text-center">
-          <h2 className="font-semibold text-3xl">Our Sponsors</h2>
-          <p className="max-w-md mx-auto mt-2 text-gray-500">
-            We are thankful to each and every company that sponsored our
-            plugin, which helped us to continue working on it.
-          </p>
+      <section className='bg-gray-800'>
+        <div className='px-24 py-16'>
+
+          <ol class="relative border-s border-gray-200 dark:border-gray-700">
+            <li class="mb-10 ms-6">
+              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                </svg>
+              </span>
+              <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flowbite Application UI v2.0.0 <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 13th, 2022</time>
+              <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+              <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+              </svg> Download ZIP</a>
+            </li>
+            <li class="mb-10 ms-6">
+              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                </svg>
+              </span>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flowbite Figma v1.3.0</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 7th, 2021</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
+            </li>
+            <li class="ms-6">
+              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                </svg>
+              </span>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.2.2</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2021</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+            </li>
+          </ol>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-10 mt-2 md:justify-around">
-          <div className="text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" fillRule="evenodd">
-              <g transform="matrix(.06928 0 0 .06928 7.367398 13.505331)" fill="none">
-                <circle r="50.167" cy="237.628" cx="269.529" fill="#00d8ff"></circle>
-                <g stroke="#00d8ff" strokeWidth="24">
-                  <path d="M269.53 135.628c67.356 0 129.928 9.665 177.107 25.907..." />
-                </g>
-              </g>
-              <path d="M64.62 38.848l-4.26-6.436c2.153-.19 4.093-1.75..." fill="#00d8ff"></path>
-            </svg>
-          </div>
-          <div className="text-gray-400">
-            <svg width="82" height="40" viewBox="0 0 148 90" className="text-black">
-              <path d="M34.992 23.495h27.855v2.219H37.546v16.699h23.792v2.219H37.546v18.334h25.591v2.219H34.992v-41.69zm30.35 0h2.96l13.115..." fill="currentColor" fillRule="nonzero"></path>
-            </svg>
-          </div>
-          <div className="text-gray-400">
-            <svg viewBox="0 0 248 31" className="w-auto h-5 text-slate-900">
-              <path fillRule="evenodd" clipRule="evenodd" d="M25.517 0C18.712 0 14.46 3.382 12.758..." />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
       </section>
 
-      <section>
-        <div className="relative flex flex-col-reverse py-16 lg:py-0 lg:flex-col">
-          <div className="w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:py-20 lg:max-w-screen-xl">
-            <div className="mb-0 lg:max-w-lg lg:pr-8 xl:pr-6">
-              <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:text-center">
-                The quick, brown fox
-                <br className="hidden md:block" />
-                jumps over a lazy dog
-              </h2>
-              <p className="mb-5 text-base text-gray-700 md:text-lg md:text-center">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae. explicabo.
-              </p>
-              <div className="mb-10 text-center md:mb-16 lg:mb-20">
-                <a
-                  href="/"
-                  className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                >
-                  Learn more
-                </a>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="mb-2 text-sm text-gray-600 md:mb-2">Follow us</div>
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center">
-                    <a
-                      href="/"
-                      className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                    >
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                        <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <a
-                      href="/"
-                      className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                    >
-                      <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
-                        <circle cx="15" cy="15" r="4" />
-                        <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <a
-                      href="/"
-                      className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                    >
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                        <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <a
-                      href="/"
-                      className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                    >
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-6">
-                        <path d="M23.8,7.2c0,0-0.2-1.7-1-2.4c-0.9-1-1.9-1-2.4-1C17,3.6,12,3.6,12,3.6h0c0,0-5,0-8.4,0.2 c-0.5,0.1-1.5,0.1-2.4,1c-0.7,0.7-1,2.4-1,2.4S0,9.1,0,11.1v1.8c0,1.9,0.2,3.9,0.2,3.9s0.2,1.7,1,2.4c0.9,1,2.1,0.9,2.6,1 c1.9,0.2,8.2,0.2,8.2,0.2s5,0,8.4-0.3c0.5-0.1,1.5-0.1,2.4-1c0.7-0.7,1-2.4,1-2.4s0.2-1.9,0.2-3.9v-1.8C24,9.1,23.8,7.2,23.8,7.2z M9.5,15.1l0-6.7l6.5,3.4L9.5,15.1z" />
-                      </svg>
-                    </a>
-                  </div>
+      <section className="text-gray-300 bg-[#142F32] body-font">
+                <div className="container mx-auto flex px-5 py-16 items-center justify-center">
+                    <div className="w-full max-w-4xl">
+                        <div className="p-6 rounded-lg border-2 border-indigo-500 text-center">
+                            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-semibold text-white">
+                                Join Us & Improve the System!
+                            </h1>
+                            <p className="mb-6 leading-relaxed">
+                                This project is open-source! Contribute, improve, or suggest features to make it better.
+                            </p>
+                            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 px-4">
+                                {/* GitHub Repo Button */}
+                                <a
+                                    href="https://github.com/its-maneeshk/Fake-Product-Detection-System.git"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center font-semibold text-gray-950 bg-[#E2FECC] py-6 px-6 rounded-lg w-full sm:w-auto hover:bg-white hover:scale-105 transition-transform focus:outline-none shadow-md"
+                                >
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 mr-2">
+                                        <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.266c-3.338.726-4.037-1.61-4.037-1.61-.547-1.39-1.335-1.76-1.335-1.76-1.09-.743.084-.727.084-.727 1.204.085 1.838 1.236 1.838 1.236 1.07 1.835 2.806 1.305 3.49.997.108-.776.42-1.305.764-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.236-3.22-.124-.303-.536-1.525.116-3.176 0 0 1.01-.323 3.3 1.23a11.43 11.43 0 0 1 3-.404c1.02.006 2.045.137 3 .404 2.29-1.553 3.298-1.23 3.298-1.23.653 1.65.242 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.625-5.477 5.922.43.37.81 1.104.81 2.226v3.293c0 .32.19.694.8.577C20.565 21.796 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+                                    </svg>
+                                    GitHub Repo
+                                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+
+                                {/* Contribute Button */}
+                                <a
+                                    href="https://github.com/login?return_to=%2Fits-maneeshk%2FFake-Product-Detection-System"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-start font-semibold text-gray-950 bg-white py-3 px-6 rounded-lg w-full sm:w-auto hover:bg-gray-100 hover:scale-105 transition-transform duration-200 focus:outline-none shadow-md"
+                                >
+                                    <svg
+                                        className="w-7 h-7 mr-2"
+                                        fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path d="M6 3v8"></path> <path d="M18 3v8"></path> <path d="M6 12a6 6 0 0 0 12 0"></path> <circle cx="6" cy="3" r="2"></circle> <circle cx="18" cy="3" r="2"></circle> <circle cx="12" cy="15" r="2"></circle>
+                                    </svg>
+                                    <span>
+                                        Want to contribute? 
+                                        <br className="hidden sm:block" />
+                                        Fork the repo & submit a pull request!
+                                    </span>
+                                    <svg className="w-5 h-5 ml-2 mt-1 sm:mt-0" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <p className="text-xs text-gray-400 mt-4">
+                                Get involved and help shape the future of this project.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="inset-y-0 top-0 right-0 w-full max-w-xl px-4 mx-auto mb-6 md:px-0 lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0">
-            <img
-              className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-            />
-          </div>
-        </div>
-      </section>
+            </section>
     </>
 
   )
