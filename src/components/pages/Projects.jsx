@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Projects = () => {
     const [repos, setRepos] = useState([]);
     const [visibleCount, setVisibleCount] = useState(6); // Initially show 6 projects
-    const defaultThumbnail = "/fallback-image.webp"; // Place a default image in your `public` folder
+    const defaultThumbnail = "/fallback-image.png"; // Place a default image in your `public` folder
 
     useEffect(() => {
         fetch("https://api.github.com/users/its-maneeshk/repos")
