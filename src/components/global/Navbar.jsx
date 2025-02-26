@@ -12,7 +12,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="bg-gray-900 text-gray-200 shadow-lg">
+        <header className="bg-gray-950 text-gray-200 shadow-lg">
             <div className="container mx-auto flex flex-wrap p-5 items-center justify-between">
 
                 {/* Logo */}
@@ -29,7 +29,7 @@ const Navbar = () => {
                         <Link
                             key={index}
                             to={path}
-                            className={`transition-colors ${location.pathname === path ? "text-orange-400 font-bold" : "hover:text-orange-400"
+                            className={`transition-colors ${location.pathname === path ? "text-primary-700 underline underline-offset-4 font-semibold" : "hover:text-primary-500"
                                 }`}
                         >
                             {path === "/" ? "HOME" : path.replace("/", "").toUpperCase()}
@@ -38,12 +38,18 @@ const Navbar = () => {
                 </nav>
 
                 {/* Call-to-Action Button (Desktop) */}
-                <button className="hidden md:inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 rounded-lg text-lg font-semibold shadow-md transition-all duration-300">
-                    Let's Connect
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 ml-2" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                </button>
+                <div className="hidden md:inline-flex justify-center">
+                    <a
+                        href='https://github.com/its-maneeshk'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className="inline-flex items-center justify-center w-auto text-gray-950 bg-white border-0  py-2 px-6 focus:outline-none hover:bg-stone-200 hover:scale-105 transition-transform duration-200 rounded-lg text-lg">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-2">
+                            <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.266c-3.338.726-4.037-1.61-4.037-1.61-.547-1.39-1.335-1.76-1.335-1.76-1.09-.743.084-.727.084-.727 1.204.085 1.838 1.236 1.838 1.236 1.07 1.835 2.806 1.305 3.49.997.108-.776.42-1.305.764-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.236-3.22-.124-.303-.536-1.525.116-3.176 0 0 1.01-.323 3.3 1.23a11.43 11.43 0 0 1 3-.404c1.02.006 2.045.137 3 .404 2.29-1.553 3.298-1.23 3.298-1.23.653 1.65.242 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.625-5.477 5.922.43.37.81 1.104.81 2.226v3.293c0 .32.19.694.8.577C20.565 21.796 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+                        </svg>
+                        Visit GitHub
+                    </a>
+                </div>
 
                 {/* Hamburger Menu Button (Mobile) */}
                 <button onClick={toggleMenu} className="md:hidden text-white focus:outline-none">
@@ -53,13 +59,13 @@ const Navbar = () => {
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden bg-gray-800 text-center py-4 space-y-4">
+                <div className="md:hidden bg-gray-900 text-center py-5 space-y-2">
                     {["/", "/projects", "/skills", "/contact"].map((path, index) => (
                         <Link
                             key={index}
                             to={path}
                             onClick={() => setIsOpen(false)}
-                            className={`block text-lg py-2 transition-colors ${location.pathname === path ? "text-orange-400 font-bold" : "hover:text-orange-400"
+                            className={`block text-lg py-1 transition-colors ${location.pathname === path ? "text-primary-700 underline underline-offset-4 font-semibold" : "hover:text-primary-500"
                                 }`}
                         >
                             {path === "/" ? "HOME" : path.replace("/", "").toUpperCase()}
@@ -67,9 +73,18 @@ const Navbar = () => {
                     ))}
 
                     {/* Call-to-Action Button (Mobile) */}
-                    <button className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg text-lg font-semibold shadow-md transition-all duration-300">
-                        Let's Connect
-                    </button>
+                    <div className="flex justify-center">
+                        <a
+                            href='https://github.com/its-maneeshk'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className="inline-flex items-center justify-center w-auto text-gray-950 bg-white border-0  py-2 px-6 focus:outline-none hover:bg-stone-200 hover:scale-105 transition-transform duration-200 rounded-lg text-lg">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-2">
+                                <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.266c-3.338.726-4.037-1.61-4.037-1.61-.547-1.39-1.335-1.76-1.335-1.76-1.09-.743.084-.727.084-.727 1.204.085 1.838 1.236 1.838 1.236 1.07 1.835 2.806 1.305 3.49.997.108-.776.42-1.305.764-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.236-3.22-.124-.303-.536-1.525.116-3.176 0 0 1.01-.323 3.3 1.23a11.43 11.43 0 0 1 3-.404c1.02.006 2.045.137 3 .404 2.29-1.553 3.298-1.23 3.298-1.23.653 1.65.242 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.625-5.477 5.922.43.37.81 1.104.81 2.226v3.293c0 .32.19.694.8.577C20.565 21.796 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+                            </svg>
+                            Visit GitHub
+                        </a>
+                    </div>
                 </div>
             )}
         </header>
