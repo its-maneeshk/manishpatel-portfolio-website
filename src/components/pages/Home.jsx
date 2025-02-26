@@ -80,7 +80,7 @@ const Home = () => {
       <section class="text-gray-600 bg-gray-200 body-font">
         <div class="container px-6 py-20 max-w-screen-xl mx-auto">
           <div class="flex flex-col text-center w-full mb-10 lg:mb-20">
-            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">ROOF PARTY POLAROID</h2>
+            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">The Journey Starts from Here...</h2>
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-950 text-left lg:text-center">The Best <span className="text-primary-700">Technology</span> Is the One That Feels Effortless —
               Just Like <span className="text-primary-700">Great Code</span>, <br/>
               It Works Without<span className="text-primary-700"> Being Noticed</span>.</h1>
@@ -94,23 +94,24 @@ const Home = () => {
                       <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                     </svg>
                   </span>
-                  <h3 className="flex items-center mb-2 text-lg font-semibold">
+                  <h3 className="flex items-center mb-2 text-xl font-semibold text-gray-950">
                     {item.title}
                     {item.isLatest && (
                       <span className="ml-3 bg-blue-200 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">
-                        Latest
+                        Currently
                       </span>
                     )}
                   </h3>
                   <time className="block mb-2 text-sm text-gray-900">{item.date}</time>
-                  <p className="mb-4 text-base text-gray-700">{item.description}</p>
+                  <p className="text-base text-primary-700">{item.location}</p>
+                  <p className="mb-4 text-base text-gray-800">{item.description}</p>
                   {item.link && (
                     <a href={item.link} className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200">
                       <svg className="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
                         <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
                       </svg>
-                      Download ZIP
+                      Download Resume
                     </a>
                   )}
                 </li>
@@ -184,22 +185,25 @@ const Home = () => {
 
 const timelineData = [
   {
-    title: "Flowbite Application UI v2.0.0",
-    date: "Released on January 13th, 2022",
-    description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    title: "Parul University",
+    date: "Journey Began in 2022 – Still Exploring",
+    location: "P.O.Limda, Ta.Waghodia, Vadodara, Gujarat, India - 391760",
+    description: "Currently pursuing a B.Tech in Computer Science and Engineering with a strong focus on full-stack development, data structures, and emerging technologies.",
     isLatest: true,
     link: "#",
   },
   {
-    title: "Flowbite Figma v1.3.0",
-    date: "Released on December 7th, 2021",
-    description: "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+    title: "National Infotech College",
+    date: "A Journey from 2020 to 2022",
+    location: "Shiromani Tole, Birgunj 44300, Nepal",
+    description: "Successfully completed Higher Secondary Education (+2) with a strong academic focus on PCM (Physics, Chemistry, and Mathematics). Developed a deep understanding of scientific principles, analytical reasoning, and mathematical problem-solving, laying a solid foundation for advanced studies in engineering and technology.",
     isLatest: false,
   },
   {
-    title: "Flowbite Library v1.2.2",
-    date: "Released on December 2nd, 2021",
-    description: "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+    title: "Holy Land English Secondary School PVT. LTD.",
+    date: "A Journey from 2008 to 2020",
+    location: "Shreepur, Birganj, Parsa, Province 2, Nepal",
+    description: "Completed secondary education (Class 10) with a comprehensive curriculum, building a strong foundation in core subjects and essential analytical, problem-solving, and critical thinking skills.",
     isLatest: false,
   },
 ];
