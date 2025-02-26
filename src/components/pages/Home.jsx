@@ -1,4 +1,5 @@
 import React from 'react'
+import heroImage from '../../assets/AdminImage.jpg'
 
 const Home = () => {
   const handleScroll = () => {
@@ -60,7 +61,7 @@ const Home = () => {
               <div className="relative p-3 border-8 border-gray-600 rounded-lg shadow-lg">
                 <div className="absolute inset-0 bg-[url('/noise-texture.png')] opacity-20 z-10 pointer-events-none"></div>
                 <img
-                  src="https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg?cs=srgb&dl=pexels-alipazani-2584269.jpg&fm=jpg"
+                  src={heroImage}
                   alt="Retro Portrait"
                   className="w-80 h-80 z-0 object-cover rounded-lg filter grayscale contrast-125 brightness-90 opacity-80"
                 />
