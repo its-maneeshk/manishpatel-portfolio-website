@@ -5,10 +5,10 @@ import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import resume from '../../assets/resume/manish-resume.pdf'
 
 const socialLinks = [
-  { name: 'Instagram', icon: <FaInstagram />, url: 'https://instagram.com/yourprofile' },
-  { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/yourprofile' },
-  { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://linkedin.com/in/yourprofile' },
-  { name: 'Twitter', icon: <FaTwitter />, url: 'https://twitter.com/yourprofile' },
+  { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/its_maneeshk_/' },
+  { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/its-maneeshk/' },
+  { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/itsmaneeshk/' },
+  { name: 'Twitter', icon: <FaTwitter />, url: 'https://x.com/its_maneeshk_' },
 ];
 
 

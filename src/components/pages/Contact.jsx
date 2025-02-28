@@ -1,9 +1,10 @@
 import React from 'react'
 import { FaEnvelope, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
+import adminImage from '../../assets/AdminImage.jpg'
 
 const contacts = [
     { name: "Email", icon: <FaEnvelope className="text-red-500" />, info: "Mail Me", link: "mailto:maneeshkurmii@gmail.com" },
-    { name: "LinkedIn", icon: <FaLinkedin className="text-blue-700" />, info: "LinkedIn", link: "https://linkedin.com/in/yourprofile" },
+    { name: "LinkedIn", icon: <FaLinkedin className="text-blue-700" />, info: "LinkedIn", link: "https://www.linkedin.com/in/itsmaneeshk/" },
     { name: "Location", icon: <FaMapMarkerAlt className="text-green-500" />, info: "Vadodare, Gujarat India" },
 ];
 
@@ -36,7 +37,7 @@ const Contact = () => {
                             <div className="shrink-0">
                                 <img
                                     alt="Manish Patel"
-                                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGV8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                    src={adminImage}
                                     className="w-16 h-16 rounded-lg object-cover shadow-md"
                                 />
                             </div>
