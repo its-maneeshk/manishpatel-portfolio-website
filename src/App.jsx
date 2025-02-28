@@ -5,6 +5,7 @@ import Footer from "./components/global/Footer";
 import Projects from "./components/pages/Projects";
 import Skills from "./components/pages/Skills";
 import PageNotFound from "./components/pages/PageNotFound";
+import Contact from "./components/pages/Contact";
 
 function App() {
 
@@ -35,6 +36,16 @@ function App() {
         <div>
           <Navbar/>
           <Skills/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/contact',
+      element: (
+        <div>
+          <Navbar/>
+          <Contact/>
           <Footer/>
         </div>
       )

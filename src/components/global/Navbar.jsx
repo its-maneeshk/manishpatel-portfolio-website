@@ -12,15 +12,12 @@ const Navbar = () => {
     };
 
     return (
-        <header className="bg-gray-950 text-gray-200 shadow-lg">
+        <header className="bg-stone-300 text-black shadow-lg">
             <div className="container mx-auto flex flex-wrap p-5 items-center justify-between">
 
                 {/* Logo */}
-                <a href="/" className="flex items-center text-white font-semibold text-2xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 p-2 bg-orange-500 rounded-full" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                    </svg>
-                    <span className="ml-3 font-bold tracking-wide">Manish Patel</span>
+                <a href="/" className="flex items-center text-gray-900 font-bold text-3xl">
+                    <span className="ml-3 font-ananda font-bold tracking-wide">Maneesh Patel</span>
                 </a>
 
                 {/* Desktop Navigation */}
@@ -29,7 +26,7 @@ const Navbar = () => {
                         <Link
                             key={index}
                             to={path}
-                            className={`transition-colors ${location.pathname === path ? "text-primary-700 underline underline-offset-4 font-semibold" : "hover:text-primary-500"
+                            className={`transition-colors ${location.pathname === path ? "text-black underline decoration-red-500 underline-offset-4 font-semibold" : "hover:text-gray-700"
                                 }`}
                         >
                             {path === "/" ? "HOME" : path.replace("/", "").toUpperCase()}
@@ -52,20 +49,20 @@ const Navbar = () => {
                 </div>
 
                 {/* Hamburger Menu Button (Mobile) */}
-                <button onClick={toggleMenu} className="md:hidden text-white focus:outline-none">
+                <button onClick={toggleMenu} className="md:hidden text-black focus:outline-none">
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden bg-gray-900 text-center py-5 space-y-2">
+                <div className="md:hidden bg-stone-200 text-center py-5 space-y-2">
                     {["/", "/projects", "/skills", "/contact"].map((path, index) => (
                         <Link
                             key={index}
                             to={path}
                             onClick={() => setIsOpen(false)}
-                            className={`block text-lg py-1 transition-colors ${location.pathname === path ? "text-primary-700 underline underline-offset-4 font-semibold" : "hover:text-primary-500"
+                            className={`block text-lg py-1 transition-colors ${location.pathname === path ? "text-black underline decoration-red-500 underline-offset-4 font-semibold" : "hover:text-gray-900"
                                 }`}
                         >
                             {path === "/" ? "HOME" : path.replace("/", "").toUpperCase()}
@@ -92,6 +89,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-
-

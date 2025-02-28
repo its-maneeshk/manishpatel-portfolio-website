@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Great-Vibes";
+    src: url("./assets/fonts/GreatVibes-Regular.ttf");
+}
+@font-face {
+    font-family: "Salita";
+    src: url('./assets/fonts/Salita.ttf');
+}
+@font-face {
+    font-family: "Ananda";
+    src: url('./assets/fonts/Ananda_Black_Personal_Use.ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

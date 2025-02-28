@@ -24,7 +24,7 @@ const Projects = () => {
     }, []);
 
     // Include specific repositories
-    const allowedRepos = ["GestureSlide-Image_Slider", "Fake-Product-Detection-System", "Voting-System-Using-Blockchain", "calc.io", "Rocksolid---a-clone-website-project", "H-eM-Store", "e-Book", "library-Website", "CalculatorUsing-Java", "HotelManagementSystemUsingJDBC"];
+    const allowedRepos = ["GestureSlide-Image_Slider", "Fake-Product-Detection-System", "Voting-System-Using-Blockchain"];
     const filteredRepos = repos.filter(repo => allowedRepos.includes(repo.name));
 
     // Get only the currently visible projects
@@ -39,36 +39,43 @@ const Projects = () => {
                         <p className="text-center text-gray-500 mt-4">No Repositories to Show...</p>
                     ) : (
                         <>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
                                 {visibleRepos.map((repo) => {
                                     const repoThumbnail = `/thumbnails/${repo.name}.png`; // Store repo images in `public/thumbnails/`
 
                                     return (
-                                        <div key={repo.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                                        <a
+                                            key={repo.id}
+                                            href={repo.html_url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group relative block overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md transition hover:shadow-lg"
+                                        >
+                                            {/* Repo Thumbnail */}
                                             <img
                                                 src={repoThumbnail}
                                                 alt={repo.name}
-                                                className="w-full h-48 object-cover"
+                                                className="h-40 w-full object-cover transition duration-300 group-hover:scale-105"
                                                 onError={(e) => (e.target.src = defaultThumbnail)}
                                             />
+
+                                            {/* Repo Details */}
                                             <div className="p-4">
-                                                <h3 className="text-lg font-semibold">{repo.name}</h3>
-                                                <p className="text-gray-600 text-sm">
+                                                <h3 className="text-md font-semibold text-gray-900 truncate">{repo.name}</h3>
+
+                                                <p className="mt-1 text-sm text-gray-600 line-clamp-2">
                                                     {repo.description ? repo.description : "No description available"}
                                                 </p>
-                                                <a
-                                                    href={repo.html_url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg"
-                                                >
+
+                                                <button className="mt-3 block w-full rounded bg-blue-600 px-4 py-2 text-xs font-medium text-white transition hover:bg-blue-700">
                                                     View on GitHub
-                                                </a>
+                                                </button>
                                             </div>
-                                        </div>
+                                        </a>
                                     );
                                 })}
                             </div>
+
 
                             {/* Load More Button */}
                             {visibleCount < filteredRepos.length && (
