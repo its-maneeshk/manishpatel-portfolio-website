@@ -3,7 +3,48 @@ import React from 'react'
 const Contact = () => {
     return (
         <>
+            <section className="w-full sm:w-3/4 lg:w-1/2 mx-auto px-4">
+                <a
+                    href="#"
+                    className="relative block overflow-hidden rounded-lg border border-gray-200 p-5 sm:p-6 lg:p-8 transition-shadow hover:shadow-lg"
+                >
+                    <span className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"></span>
 
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+                        <div className="flex-1">
+                            <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">
+                                Passionate Full-Stack Developer & Problem Solver
+                            </h3>
+                            <p className="mt-1 text-sm text-gray-600">By Manish Patel</p>
+                        </div>
+
+                        <div className="shrink-0">
+                            <img
+                                alt="Manish Patel"
+                                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGV8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                className="w-16 h-16 rounded-lg object-cover shadow-md"
+                            />
+                        </div>
+                    </div>
+
+                    <p className="mt-4 text-sm text-gray-500 leading-relaxed">
+                        I'm a CSE student with a passion for **full-stack development, problem-solving, and blockchain technology**.
+                        I enjoy working on **real-world challenges**, creating efficient software solutions, and constantly improving my skills.
+                        Currently building a **Fake Product Detection System** to enhance trust in eCommerce.
+                    </p>
+
+                    <dl className="mt-6 flex gap-6 text-xs text-gray-500">
+                        <div className="flex flex-col">
+                            <dt className="font-medium text-gray-700">Education</dt>
+                            <dd>B.Tech in Computer Science</dd>
+                        </div>
+                        <div className="flex flex-col">
+                            <dt className="font-medium text-gray-700">Experience</dt>
+                            <dd>Web & Blockchain Development</dd>
+                        </div>
+                    </dl>
+                </a>
+            </section>
             <section className="py-6 bg-gray-200 dark:text-gray-900">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 md:py-0 md:px-6">
