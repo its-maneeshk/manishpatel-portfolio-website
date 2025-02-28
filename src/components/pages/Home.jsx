@@ -1,6 +1,8 @@
 import React from 'react'
 import heroImage from '../../assets/AdminImage.jpg'
+import { useState } from 'react';
 import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import resume from '../../assets/resume/manish-resume.pdf'
 
 const socialLinks = [
   { name: 'Instagram', icon: <FaInstagram />, url: 'https://instagram.com/yourprofile' },
@@ -11,10 +13,9 @@ const socialLinks = [
 
 
 const Home = () => {
-  const handleScroll = () => {
-    const element = document.getElementById('more-button');
-    element.scrollIntoView({ behavior: 'smooth' });
-  };
+
+  const [showResume, setShowResume] = useState(false);
+
   return (
     <>
       <section class="text-gray-600 body-font" id='more-button'>
@@ -32,16 +33,37 @@ const Home = () => {
               <div class="flex flex-col mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                 <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                   Contact Info
-                  <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                  </svg>
                 </a>
-                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center bg-gray-200 text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                  <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                <button
+                  className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg bg-gray-200 hover:bg-gray-300 focus:ring-4"
+                  onClick={() => setShowResume(true)}
+                >
                   View Resume
-                </a>
+                  <svg className="mr-2 ml-1 w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                  </svg>
+                </button>
+                {showResume && (
+                  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4">
+                    <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+                      <h2 className="text-xl font-bold mb-4">Manish's Resume</h2>
+                      <embed src={resume} type="application/pdf" className="w-full h-96" title="Resume"></embed>
+                      <button
+                        className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                        onClick={() => setShowResume(false)}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
 
-              <div className='flex justify-center items-center py-2 px-12 rounded-lg border bg-gray-200 border-gray-300'>
-                <div className="flex justify-center space-x-10">
+              <div className='flex justify-center items-center py-2 px-6 rounded-lg border bg-gray-200 border-gray-300'>
+                <div className="flex justify-center space-x-7">
                   {socialLinks.map((link, index) => (
                     <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-500 text-4xl">
                       {link.icon}
