@@ -37,7 +37,7 @@ const Home = () => {
             </h1>
             <p class="mb-8 font-thin leading-relaxed">From crafting seamless digital experiences to pushing the boundaries of innovation, I build, break, and create solutions that matter. Let’s shape the future, one line of code at a time!</p>
             <div>
-              <div class="flex flex-col mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+              <div class="relative z-50 flex flex-col mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                 <a
                   onClick={goToContactPage}
                   href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
