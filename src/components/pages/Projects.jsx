@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const Projects = () => {
     const [repos, setRepos] = useState([]);
     const [visibleCount, setVisibleCount] = useState(3);
-    const defaultThumbnail = "src/assets/GitHub Project Thumbnails/fallback_image.jpg"; // Fallback image
+    const defaultThumbnail = "./public/GitHub Project Thumbnails/fallback_image.jpg"; // Fallback image
 
     useEffect(() => {
         fetch("https://api.github.com/users/its-maneeshk/repos")
@@ -67,7 +67,8 @@ const Projects = () => {
                 <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-screen-xl mx-auto gap-6 mt-8">
                         {visibleRepos.map((repo) => {
-                            const repoThumbnail = `./src/assets/GitHub Project Thumbnails/${repo.name}.png`;
+                            // const repoThumbnail = `./src/assets/GitHub Project Thumbnails/${repo.name}.png`;
+                            const repoThumbnail = `./GitHub Project Thumbnails/${repo.name}.png`;
 
                             return (
                                 <div
