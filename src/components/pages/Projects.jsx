@@ -67,7 +67,7 @@ const Projects = () => {
                 <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-screen-xl mx-auto gap-6 mt-8">
                         {visibleRepos.map((repo) => {
-                            const repoThumbnail = `src/assets/GitHub Project Thumbnails/${repo.name}.png`;
+                            const repoThumbnail = `./src/assets/GitHub Project Thumbnails/${repo.name}.png`;
 
                             return (
                                 <div
