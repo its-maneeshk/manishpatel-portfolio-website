@@ -1,8 +1,9 @@
 import React from 'react'
-import heroImage from '../../assets/AdminImage.jpg'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import resume from '../../assets/resume/manish-resume.pdf'
+import heroImage from '../../assets/AdminImage.jpg'
 
 const socialLinks = [
   { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/its_maneeshk_/' },
@@ -13,6 +14,12 @@ const socialLinks = [
 
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  const goToContactPage = () => {
+    navigate('/contact');
+  }
 
   const [showResume, setShowResume] = useState(false);
 
@@ -31,7 +38,9 @@ const Home = () => {
             <p class="mb-8 font-thin leading-relaxed">From crafting seamless digital experiences to pushing the boundaries of innovation, I build, break, and create solutions that matter. Let’s shape the future, one line of code at a time!</p>
             <div>
               <div class="flex flex-col mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                <a
+                  onClick={goToContactPage}
+                  href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                   Contact Info
                   <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -47,10 +56,10 @@ const Home = () => {
                   </svg>
                 </button>
                 {showResume && (
-                  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4">
+                  <div className=" fixed inset-1 flex items-center justify-center bg-black bg-opacity-90  p-4">
                     <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
                       <h2 className="text-xl font-bold mb-4">Manish's Resume</h2>
-                      <iframe src={resume} className="w-full h-96" title="Resume"></iframe>
+                      <iframe src={resume} className="w-full h-96 bg-gray-200" title="Resume"></iframe>
                       <button
                         className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
                         onClick={() => setShowResume(false)}
@@ -79,7 +88,7 @@ const Home = () => {
             {/* BLACK AND WHIRE IMAGE AND FRAME */}
             <div className="flex">
               <div className="relative p-3 border-8 border-gray-600 rounded-lg shadow-lg">
-                <div className="absolute inset-0 bg-[url('/noise-texture.png')] opacity-20 z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[url('/noise-texture.png')]  pointer-events-none"></div>
                 <img
                   src={heroImage}
                   alt="Retro Portrait"
